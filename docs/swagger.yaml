@@ -1,0 +1,166 @@
+basePath: /
+host: 127.0.0.1:8000
+info:
+  contact:
+    name: API Support
+    url: http://demo.com/support
+  description: API server
+  title: CRUD API
+  version: "1.0"
+paths:
+  /person/create:
+    post:
+      consumes:
+      - application/json
+      description: creates Resource directory
+      parameters:
+      - description: name
+        in: path
+        name: name
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: Creates a account
+      tags:
+      - Accounts
+  /person/delete:
+    delete:
+      consumes:
+      - application/json
+      description: creates Resource directory
+      parameters:
+      - description: uuid
+        in: path
+        name: name
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: delete account
+      tags:
+      - Accounts
+  /person/getpersonbyid:
+    get:
+      consumes:
+      - application/json
+      description: creates Resource directory
+      parameters:
+      - description: uuid
+        in: path
+        name: name
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: get persons by ID
+      tags:
+      - Accounts
+  /person/getpersonnotbyid:
+    get:
+      consumes:
+      - application/json
+      description: creates Resource directory
+      parameters:
+      - description: uuid
+        in: path
+        name: name
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: get persons not by ID
+      tags:
+      - Accounts
+  /person/update:
+    patch:
+      consumes:
+      - application/json
+      description: creates Resource directory
+      parameters:
+      - description: uuid
+        in: path
+        name: name
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: updates account
+      tags:
+      - Accounts
+swagger: "2.0"

@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  webapp:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: "practice"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "xlr22856"
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "8889:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "postgres@ya.ru"
+      PGADMIN_DEFAULT_PASSWORD: "1234"
+volumes:
+      postgres_volume:
+
